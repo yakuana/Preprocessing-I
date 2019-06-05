@@ -57,3 +57,69 @@ html, body {
     height: 100%;
 }
 
+// Variables 
+@light-grey: rgb(148, 148, 148); 
+@border-size: 1px solid; 
+
+
+// Mixin 
+.row {
+	display: flex; 
+	flex-direction: row; 
+}
+
+.column {
+	display: flex; 
+	flex-direction: column; 
+}
+
+// Not Mixin 
+.container {
+	border: @border-size maroon; 
+	width: 85%; 
+	margin: 0 auto; 
+	font-size: 62.5%; 
+}
+
+header {
+	// border: @border-size red; 
+	.row(); 
+	justify-content: flex-end; 
+
+	nav {
+		// border: @border-size plum; 
+		height: 50px; 
+		width: 40%; 
+		.row(); 
+		justify-content: space-evenly; 
+		padding-top: 15px; 
+	}
+	
+	nav a {
+		// border: @border-size brown; 
+		font-size: 1rem;
+		color: @light-grey; 
+		text-decoration: none;  
+	}
+
+	nav a:hover {
+		text-decoration: underline; 
+	}
+}
+
+.top-content {
+	border: @border-size orange; 
+}
+
+.middle-content {
+	border: @border-size gold; 
+
+}
+
+.bottom-content {
+	border: @border-size green; 
+}
+
+.footer-container {
+	border: @border-size lightblue; 
+}
