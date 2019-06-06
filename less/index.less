@@ -57,3 +57,280 @@ html, body {
     height: 100%;
 }
 
+// Variables 
+@light-grey: rgb(230, 230, 230); 
+@dark-grey: rgb(199, 199, 199); 
+@black-border: 1px solid black; 
+@border-size: 1px solid; 
+@font-color: black; 
+@one-three-rem: 1.3rem; 
+@one-rem: 1rem; 
+
+// Mixin 
+.row {
+	display: flex; 
+	flex-direction: row; 
+}
+
+.column {
+	display: flex; 
+	flex-direction: column; 
+}
+
+.center {
+	display: flex; 
+	justify-content: center; 
+}
+
+// Not Mixin 
+.container {
+	border: @black-border; 
+	width: 85%; 
+	margin: 0 auto; 
+	font-size: 62.5%; 
+}
+
+header {
+	.row(); 
+	border-bottom: @black-border; 
+	justify-content: flex-end; 
+
+	nav {
+		// border: @border-size plum; 
+		.row(); 
+		height: 50px; 
+		width: 40%; 
+		justify-content: space-evenly; 
+		padding-top: 15px; 
+	}
+	
+	nav a {
+		// border: @border-size brown; 
+		font-size: 1rem;
+		color: @font-color; 
+		text-decoration: none;  
+	}
+
+	nav a:hover {
+		// text-decoration: underline; 
+		color: lighten(@font-color, 50%); 
+	}
+}
+
+.top-content {
+	// border: @border-size orange; 
+	background: @light-grey; 
+	height: 550px; 
+	.column(); 
+	.center(); 
+	justify-content: space-evenly;
+
+	.introduction {
+		// border: @border-size green; 
+		background: white;
+		.row(); 
+		padding-top: 10px;  
+		padding-bottom: 10px; ; 
+		height: 430px;  
+
+		img {
+			width: 600px;
+			height: 400px;
+			object-fit: cover;
+		}
+		
+		h1 {
+			// border: @border-size green; 
+			font-size: 3rem; 
+		}
+
+		p {
+			// border: @border-size green; 
+			font-size: @one-three-rem;  
+		}
+
+		div {
+			// border: @border-size green; 
+			.column(); 
+			justify-content: center; 
+			padding: 10px; 
+			height: 400px;
+		}
+	}
+
+	.team {
+		// border: @border-size mediumblue; 
+		background: white; 
+		.center(); 
+		height: 80px; 
+		padding-bottom: 5px; 
+
+
+		div { 
+			// border: @border-size palevioletred; 
+			color: @font-color; 
+			.column(); 
+			justify-content: space-around;
+			 
+		}
+
+		p {
+			// border: @border-size palevioletred; 
+			font-size: 1.1rem; 
+		}
+
+		a {
+			// border: @border-size palevioletred; 
+			color: @font-color;  
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: lighten(@font-color, 50%);  
+		}
+
+		.team-button { 
+			border: 2px solid @dark-grey;
+			background: @light-grey;  
+			border-radius: 5px; 
+			font-size: @one-three-rem; 
+			text-align: center; 
+			width: 170px; 
+			padding: 5px; 
+			margin-left: auto; 
+			margin-right: auto; 
+		}
+	}
+}
+
+.middle-content {
+	// border: @border-size gold; 
+	height: 250px; 
+	padding: 20px; 
+	font-size: @one-rem;  
+	.row(); 
+	justify-content: space-around;
+	
+
+	h1 {
+		// border: @border-size seagreen; 
+		font-size: 1.8rem; 
+	}
+
+	h3 { 
+		border-bottom: @black-border; 
+		font-size: 2rem; 
+		text-align: center; 
+		padding-bottom: 5px; 
+	}
+
+	p { 
+		// border: @border-size saddlebrown; 
+		width: 95%; 
+		padding-top: 20px; 
+		padding-bottom: 20px; 
+		margin-left: auto; 
+		margin-right: auto; 
+	}
+
+
+	.about-me {
+		// border: @border-size seagreen; 
+		width: 60%; 
+	}
+
+	.my-skills { 
+		// border: @border-size darkolivegreen; 
+		width: 30%;  
+	}
+
+	.skills-list {
+		// border: @border-size red; 
+		height: 150px; 
+		width: 80%; 
+		padding-top: 2px; 
+		padding-left: 15%; 
+		list-style-type: cjk-ideographic;
+		font-size: @one-three-rem; 
+
+		li {
+			padding-top: 5px; 
+			padding-bottom: 5px; 
+		}
+	}
+}
+
+.bottom-content {
+	// border: @border-size green; 
+	font-size: @one-rem;  
+	.column(); 
+
+	.table-title {
+		background: @light-grey; 
+		font-size: 1.2rem; 
+		text-align: center; 
+	}
+
+	.table-contents {
+		border: @black-border;
+		ul {
+			.row(); 
+			justify-content: space-around; 
+		}
+	}
+
+	.table-components {
+		border: @black-border; 
+		height: 250px; 
+		.row(); 
+		justify-content: space-between;  
+
+		p {
+			border-bottom: @black-border; 
+			padding-left: 5px; 
+			padding-top: 20px;
+			padding-bottom: 20px; 
+		}
+
+		.company {
+			border: @black-border; 
+			width: 25%; 
+			.column(); 
+			justify-content: space-between; 
+		}
+	
+		.years {
+			border: @black-border; 
+			width: 25%;
+			text-align: center; 
+			.column(); 
+			justify-content: space-between; 
+		}
+	
+		.position {
+			border: @black-border; 
+			width: 25%;	
+			.column(); 
+			justify-content: space-between; 
+		}
+	
+		.tech-used {
+			border: @black-border; 
+			width: 25%;	
+			.column(); 
+			justify-content: space-between; 
+		}
+	}
+
+	
+}
+
+.footer-container {
+	// border: @border-size lightblue; 
+	height: 25px; 
+	footer {
+		.center();
+		padding-top: 5px; 
+		font-size: .8rem; 
+	}
+}

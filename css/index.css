@@ -1,1 +1,355 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  border: 1px solid black;
+  width: 85%;
+  margin: 0 auto;
+  font-size: 62.5%;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  justify-content: flex-end;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 40%;
+  justify-content: space-evenly;
+  padding-top: 15px;
+}
+header nav a {
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: #808080;
+}
+.top-content {
+  background: #e6e6e6;
+  height: 550px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.top-content .introduction {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 430px;
+}
+.top-content .introduction img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+.top-content .introduction h1 {
+  font-size: 3rem;
+}
+.top-content .introduction p {
+  font-size: 1.3rem;
+}
+.top-content .introduction div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  height: 400px;
+}
+.top-content .team {
+  background: white;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  padding-bottom: 5px;
+}
+.top-content .team div {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.top-content .team p {
+  font-size: 1.1rem;
+}
+.top-content .team a {
+  color: black;
+  text-decoration: none;
+}
+.top-content .team a:hover {
+  color: #808080;
+}
+.top-content .team .team-button {
+  border: 2px solid #c7c7c7;
+  background: #e6e6e6;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 170px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.middle-content {
+  height: 250px;
+  padding: 20px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.middle-content h1 {
+  font-size: 1.8rem;
+}
+.middle-content h3 {
+  border-bottom: 1px solid black;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.middle-content p {
+  width: 95%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.middle-content .about-me {
+  width: 60%;
+}
+.middle-content .my-skills {
+  width: 30%;
+}
+.middle-content .skills-list {
+  height: 150px;
+  width: 80%;
+  padding-top: 2px;
+  padding-left: 15%;
+  list-style-type: cjk-ideographic;
+  font-size: 1.3rem;
+}
+.middle-content .skills-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.bottom-content {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.bottom-content .table-title {
+  background: #e6e6e6;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.bottom-content .table-contents {
+  border: 1px solid black;
+}
+.bottom-content .table-contents ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.bottom-content .table-components {
+  border: 1px solid black;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bottom-content .table-components p {
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.bottom-content .table-components .company {
+  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom-content .table-components .years {
+  border: 1px solid black;
+  width: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom-content .table-components .position {
+  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom-content .table-components .tech-used {
+  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-container {
+  height: 25px;
+}
+.footer-container footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  font-size: 0.8rem;
+}
