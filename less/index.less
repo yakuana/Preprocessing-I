@@ -59,9 +59,12 @@ html, body {
 
 // Variables 
 @light-grey: rgb(230, 230, 230); 
+@dark-grey: rgb(199, 199, 199); 
 @black-border-bottom: 1px solid black; 
 @border-size: 1px solid; 
 @font-color: black; 
+@one-three-rem: 1.3rem; 
+@one-rem: 1rem; 
 
 // Mixin 
 .row {
@@ -115,7 +118,7 @@ header {
 }
 
 .top-content {
-	border: @border-size orange; 
+	// border: @border-size orange; 
 	background: @light-grey; 
 	height: 550px; 
 	.column(); 
@@ -143,7 +146,7 @@ header {
 
 		p {
 			// border: @border-size green; 
-			font-size: 1.3rem; 
+			font-size: @one-three-rem;  
 		}
 
 		div {
@@ -160,6 +163,7 @@ header {
 		background: white; 
 		.center(); 
 		height: 80px; 
+		padding-bottom: 5px; 
 
 
 		div { 
@@ -177,6 +181,7 @@ header {
 
 		a {
 			// border: @border-size palevioletred; 
+			color: @font-color;  
 			text-decoration: none;
 		}
 
@@ -185,9 +190,10 @@ header {
 		}
 
 		.team-button { 
-			border: 2px solid black; 
+			border: 2px solid @dark-grey;
+			background: @light-grey;  
 			border-radius: 5px; 
-			font-size: 1.3rem; 
+			font-size: @one-three-rem; 
 			text-align: center; 
 			width: 170px; 
 			padding: 5px; 
@@ -198,8 +204,22 @@ header {
 }
 
 .middle-content {
-	border: @border-size gold; 
+	// border: @border-size gold; 
+	font-size: @one-rem; 
+	padding: 5px; 
 
+	h1 {
+		font-size: 2rem; 
+	}
+
+	p { 
+		// border: @border-size seagreen; 
+		width: 90%; 
+		padding-top: 10px; 
+		padding-bottom: 5px; 
+		margin-left: auto; 
+		margin-right: auto; 
+	}
 }
 
 .bottom-content {
