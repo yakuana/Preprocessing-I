@@ -60,7 +60,7 @@ html, body {
 // Variables 
 @light-grey: rgb(230, 230, 230); 
 @dark-grey: rgb(199, 199, 199); 
-@black-border-bottom: 1px solid black; 
+@black-border: 1px solid black; 
 @border-size: 1px solid; 
 @font-color: black; 
 @one-three-rem: 1.3rem; 
@@ -84,7 +84,7 @@ html, body {
 
 // Not Mixin 
 .container {
-	border: @border-size maroon; 
+	border: @black-border; 
 	width: 85%; 
 	margin: 0 auto; 
 	font-size: 62.5%; 
@@ -92,7 +92,7 @@ html, body {
 
 header {
 	.row(); 
-	border-bottom: @black-border-bottom; 
+	border-bottom: @black-border; 
 	justify-content: flex-end; 
 
 	nav {
@@ -154,7 +154,7 @@ header {
 			.column(); 
 			justify-content: center; 
 			padding: 10px; 
-			height: 400px; 
+			height: 400px;
 		}
 	}
 
@@ -205,32 +205,132 @@ header {
 
 .middle-content {
 	// border: @border-size gold; 
-	font-size: @one-rem; 
-	padding: 5px; 
+	height: 250px; 
+	padding: 20px; 
+	font-size: @one-rem;  
+	.row(); 
+	justify-content: space-around;
+	
 
 	h1 {
+		// border: @border-size seagreen; 
+		font-size: 1.8rem; 
+	}
+
+	h3 { 
+		border-bottom: @black-border; 
 		font-size: 2rem; 
+		text-align: center; 
+		padding-bottom: 5px; 
 	}
 
 	p { 
-		// border: @border-size seagreen; 
-		width: 90%; 
-		padding-top: 10px; 
-		padding-bottom: 5px; 
+		// border: @border-size saddlebrown; 
+		width: 95%; 
+		padding-top: 20px; 
+		padding-bottom: 20px; 
 		margin-left: auto; 
 		margin-right: auto; 
+	}
+
+
+	.about-me {
+		// border: @border-size seagreen; 
+		width: 60%; 
+	}
+
+	.my-skills { 
+		// border: @border-size darkolivegreen; 
+		width: 30%;  
+	}
+
+	.skills-list {
+		// border: @border-size red; 
+		height: 150px; 
+		width: 80%; 
+		padding-top: 2px; 
+		padding-left: 15%; 
+		list-style-type: cjk-ideographic;
+		font-size: @one-three-rem; 
+
+		li {
+			padding-top: 5px; 
+			padding-bottom: 5px; 
+		}
 	}
 }
 
 .bottom-content {
-	border: @border-size green; 
+	// border: @border-size green; 
+	font-size: @one-rem;  
+	.column(); 
+
+	.table-title {
+		background: @light-grey; 
+		font-size: 1.2rem; 
+		text-align: center; 
+	}
+
+	.table-contents {
+		border: @black-border;
+		ul {
+			.row(); 
+			justify-content: space-around; 
+		}
+	}
+
+	.table-components {
+		border: @black-border; 
+		height: 250px; 
+		.row(); 
+		justify-content: space-between;  
+
+		p {
+			border-bottom: @black-border; 
+			padding-left: 5px; 
+			padding-top: 20px;
+			padding-bottom: 20px; 
+		}
+
+		.company {
+			border: @black-border; 
+			width: 25%; 
+			.column(); 
+			justify-content: space-between; 
+		}
+	
+		.years {
+			border: @black-border; 
+			width: 25%;
+			text-align: center; 
+			.column(); 
+			justify-content: space-between; 
+		}
+	
+		.position {
+			border: @black-border; 
+			width: 25%;	
+			.column(); 
+			justify-content: space-between; 
+		}
+	
+		.tech-used {
+			border: @black-border; 
+			width: 25%;	
+			.column(); 
+			justify-content: space-between; 
+		}
+	}
+
+	
 }
 
 .footer-container {
-	border: @border-size lightblue; 
-	height: 20px; 
+	// border: @border-size lightblue; 
+	height: 25px; 
 	footer {
 		.center();
-		padding-top: .4%; 
+		padding-top: 5px; 
+		font-size: .8rem; 
 	}
 }

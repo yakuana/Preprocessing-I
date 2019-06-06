@@ -147,7 +147,7 @@ body {
   justify-content: center;
 }
 .container {
-  border: 1px solid maroon;
+  border: 1px solid black;
   width: 85%;
   margin: 0 auto;
   font-size: 62.5%;
@@ -243,28 +243,113 @@ header nav a:hover {
   margin-right: auto;
 }
 .middle-content {
+  height: 250px;
+  padding: 20px;
   font-size: 1rem;
-  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .middle-content h1 {
+  font-size: 1.8rem;
+}
+.middle-content h3 {
+  border-bottom: 1px solid black;
   font-size: 2rem;
+  text-align: center;
+  padding-bottom: 5px;
 }
 .middle-content p {
-  width: 90%;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  width: 95%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }
+.middle-content .about-me {
+  width: 60%;
+}
+.middle-content .my-skills {
+  width: 30%;
+}
+.middle-content .skills-list {
+  height: 150px;
+  width: 80%;
+  padding-top: 2px;
+  padding-left: 15%;
+  list-style-type: cjk-ideographic;
+  font-size: 1.3rem;
+}
+.middle-content .skills-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .bottom-content {
-  border: 1px solid green;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.bottom-content .table-title {
+  background: #e6e6e6;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.bottom-content .table-contents {
+  border: 1px solid black;
+}
+.bottom-content .table-contents ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.bottom-content .table-components {
+  border: 1px solid black;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bottom-content .table-components p {
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.bottom-content .table-components .company {
+  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom-content .table-components .years {
+  border: 1px solid black;
+  width: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom-content .table-components .position {
+  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom-content .table-components .tech-used {
+  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .footer-container {
-  border: 1px solid lightblue;
-  height: 20px;
+  height: 25px;
 }
 .footer-container footer {
   display: flex;
   justify-content: center;
-  padding-top: 0.4%;
+  padding-top: 5px;
+  font-size: 0.8rem;
 }
