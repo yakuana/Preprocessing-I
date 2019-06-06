@@ -58,9 +58,10 @@ html, body {
 }
 
 // Variables 
-@light-grey: rgb(148, 148, 148); 
+@light-grey: rgb(230, 230, 230); 
+@black-border-bottom: 1px solid black; 
 @border-size: 1px solid; 
-
+@font-color: black; 
 
 // Mixin 
 .row {
@@ -73,6 +74,11 @@ html, body {
 	flex-direction: column; 
 }
 
+.center {
+	display: flex; 
+	justify-content: center; 
+}
+
 // Not Mixin 
 .container {
 	border: @border-size maroon; 
@@ -82,15 +88,15 @@ html, body {
 }
 
 header {
-	// border: @border-size red; 
 	.row(); 
+	border-bottom: @black-border-bottom; 
 	justify-content: flex-end; 
 
 	nav {
 		// border: @border-size plum; 
+		.row(); 
 		height: 50px; 
 		width: 40%; 
-		.row(); 
 		justify-content: space-evenly; 
 		padding-top: 15px; 
 	}
@@ -98,17 +104,97 @@ header {
 	nav a {
 		// border: @border-size brown; 
 		font-size: 1rem;
-		color: @light-grey; 
+		color: @font-color; 
 		text-decoration: none;  
 	}
 
 	nav a:hover {
-		text-decoration: underline; 
+		// text-decoration: underline; 
+		color: lighten(@font-color, 50%); 
 	}
 }
 
 .top-content {
 	border: @border-size orange; 
+	background: @light-grey; 
+	height: 550px; 
+	.column(); 
+	.center(); 
+	justify-content: space-evenly;
+
+	.introduction {
+		// border: @border-size green; 
+		background: white;
+		.row(); 
+		padding-top: 10px;  
+		padding-bottom: 10px; ; 
+		height: 430px;  
+
+		img {
+			width: 600px;
+			height: 400px;
+			object-fit: cover;
+		}
+		
+		h1 {
+			// border: @border-size green; 
+			font-size: 3rem; 
+		}
+
+		p {
+			// border: @border-size green; 
+			font-size: 1.3rem; 
+		}
+
+		div {
+			// border: @border-size green; 
+			.column(); 
+			justify-content: center; 
+			padding: 10px; 
+			height: 400px; 
+		}
+	}
+
+	.team {
+		// border: @border-size mediumblue; 
+		background: white; 
+		.center(); 
+		height: 80px; 
+
+
+		div { 
+			// border: @border-size palevioletred; 
+			color: @font-color; 
+			.column(); 
+			justify-content: space-around;
+			 
+		}
+
+		p {
+			// border: @border-size palevioletred; 
+			font-size: 1.1rem; 
+		}
+
+		a {
+			// border: @border-size palevioletred; 
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: lighten(@font-color, 50%);  
+		}
+
+		.team-button { 
+			border: 2px solid black; 
+			border-radius: 5px; 
+			font-size: 1.3rem; 
+			text-align: center; 
+			width: 170px; 
+			padding: 5px; 
+			margin-left: auto; 
+			margin-right: auto; 
+		}
+	}
 }
 
 .middle-content {
@@ -122,4 +208,9 @@ header {
 
 .footer-container {
 	border: @border-size lightblue; 
+	height: 20px; 
+	footer {
+		.center();
+		padding-top: .4%; 
+	}
 }

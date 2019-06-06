@@ -142,6 +142,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+.center {
+  display: flex;
+  justify-content: center;
+}
 .container {
   border: 1px solid maroon;
   width: 85%;
@@ -151,26 +155,90 @@ body {
 header {
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid black;
   justify-content: flex-end;
 }
 header nav {
-  height: 50px;
-  width: 40%;
   display: flex;
   flex-direction: row;
+  height: 50px;
+  width: 40%;
   justify-content: space-evenly;
   padding-top: 15px;
 }
 header nav a {
   font-size: 1rem;
-  color: #949494;
+  color: black;
   text-decoration: none;
 }
 header nav a:hover {
-  text-decoration: underline;
+  color: #808080;
 }
 .top-content {
   border: 1px solid orange;
+  background: #e6e6e6;
+  height: 550px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.top-content .introduction {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 430px;
+}
+.top-content .introduction img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+.top-content .introduction h1 {
+  font-size: 3rem;
+}
+.top-content .introduction p {
+  font-size: 1.3rem;
+}
+.top-content .introduction div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  height: 400px;
+}
+.top-content .team {
+  background: white;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+}
+.top-content .team div {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.top-content .team p {
+  font-size: 1.1rem;
+}
+.top-content .team a {
+  text-decoration: none;
+}
+.top-content .team a:hover {
+  color: #808080;
+}
+.top-content .team .team-button {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 170px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .middle-content {
   border: 1px solid gold;
@@ -180,4 +248,10 @@ header nav a:hover {
 }
 .footer-container {
   border: 1px solid lightblue;
+  height: 20px;
+}
+.footer-container footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.4%;
 }
